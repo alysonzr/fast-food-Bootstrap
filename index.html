@@ -1,28 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css" >
-		<link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css">
-		<link rel="stylesheet" href="node_modules/bootstrap-icons/font/fonts/bootstrap-icons.css">
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" >
+		<!-- <link rel="stylesheet" href="node_modules/bootstrap/compiler/style.css"> -->
+		<!-- <link rel="stylesheet" href="node_modules/bootstrap-icons/font/fonts/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+		<script src="https://kit.fontawesome.com/3eeb9557e5.js" crossorigin="anonymous"></script>
     	<link rel="stylesheet" href="css/style.css">
 		<link rel="sortcut icon" href="imgs/logo.png" type="image/x-icon" />
 
   </head>
   <body>
 
-	
-	<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+	<!-- CABEÇALHO -->
+	<nav class="navbar navbar-expand-xl navbar-light bg-light" >
 		<div class="container">
 			
 			<a class="navbar-brand"  href="#"> <img src="imgs/logo.png" style="padding: 0px 9px;" >CartzZilla</a>
-			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSite" aria-expanded="false"  style="position: relative; right: -16%;">
+			<button class="navbar-toggler collapsed" type="button" data-toggle="modal" data-bs-toggle="collapse" data-bs-target="#navbarSite" aria-expanded="false"  style="margin-left: auto;">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			
-			
+				<a  data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="modal" data-target="#exampleModal" id="marginsIcon" style="padding-left: 13px;">
+					<img src="imgs/person.svg" width="30" height="30" class="d-inline-block align-text-top" >
+				</a>
+		
 			<div class="collapse navbar-collapse" id="navbarSite">
 
 				<ul class="navbar-nav">
@@ -45,7 +50,7 @@
 							<a class="nav-link" href="#">UI Kit (Components)</a>
 							</li>
 							<li class="nav-item">
-							<a class="nav-link" href="#">Blog</a>
+							<a class="nav-link" href="#" >Blog</a>
 							</li>
 							<li class="nav-item">
 							<a class="nav-link" href="#">Docs</a>
@@ -58,13 +63,9 @@
 							</li>
 					</ul>
 			</div>	
-			<a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#exampleModal" id="marginsIcon">
-				 <img src="imgs/person.svg" width="30" height="30" class="d-inline-block align-text-top" >
-			</a>
-		
 		</div>	
 	</nav>
-
+<!-- TELA INICIAL -->
 	<section class="bg-darker bg-size-cover bg-position-center py-5 py-lg-10" style="background-image: url(imgs/index.jpg);background-size: cover;"> 
 		<div class="container pb-5">
 			<div class="row justify-content-center pb-5">
@@ -77,7 +78,7 @@
 
 							<div class="dropdown-menu dropdown-menu-end" style="border:none;">
 								<a class="dropdown-item fs-base" href="#">Los Angeles</a>
-								<a class="dropdown-item fs-base"  href="#">Chicago </a>
+								<a class="dropdown-item fs-base" href="#">Chicago </a>
 								<a class="dropdown-item fs-base" href="#">Houston</a>
 								<a class="dropdown-item fs-base" href="#">Philadelphia</a>
 								<a class="dropdown-item fs-base" href="#">San Diego</a>
@@ -93,61 +94,61 @@
 	</section>
 
 
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"
-	aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<!--Content-->
-		<div class="modal-content form-elegant">
-		<!--Header-->
-		<div class="modal-header text-center">
-			<h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<!--Body-->
-		<div class="modal-body mx-4">
+	<!-- Modal de registro usuario -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal"aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<!--Content-->
+			<div class="modal-content form-elegant">
+			<!--Header-->
+			<div class="modal-header text-center">
+				<h3 class="modal-title w-100 font-weight-bold my-3" id="myModalLabel"><strong>Sign in</strong></h3>
+				<button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+				 
+			</div>
 			<!--Body-->
-			<div class="md-form mb-5">
-			<input type="email" id="Form-email1" class="form-control validate">
-			<label data-error="wrong" data-success="right" for="Form-email1">Your email</label>
-			</div>
+			<div class="modal-body mx-4">
+				<!--Body-->
+				<div class="md-form mb-5">
+				
+				<label data-error="wrong" data-success="right" for="form_email">Your email</label>
+				<input type="email" id="form_email" class="form-control validate">
+				</div>
 
-			<div class="md-form pb-3">
-			<input type="password" id="Form-pass1" class="form-control validate">
-			<label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
-			<p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">
-				Password?</a></p>
-			</div>
+				<div class="md-form pb-3">
+				<label data-error="wrong" data-success="right" for="form_pass">Your password</label>
+				<input type="password" id="form_pass" class="form-control validate">
+				
+				<p class="text-primary d-flex justify-content-end mt-3"><small>Forgot&nbsp; <a href="#" class="text-primary ml-1 text-decoration-none">
+					Password?</a></small></p>
+				</div>
 
-			<div class="text-center mb-3">
-			<button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Sign in</button>
-			</div>
-			<p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
-			with:</p>
+				<div class="text-center mb-3">
+				<button type="button" class="btn" id="btn_register">Sign in</button>
+				</div>
+				<p class="dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"><small> or Sign in
+				with:</small></p>
 
-			<div class="row my-3 d-flex justify-content-center">
-			<!--Facebook-->
-			<button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
-			<!--Twitter-->
-			<button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i id="twiter" class="fab fa-twitter"></i></button>
-			<!--Google +-->
-			<button type="button" class="btn btn-white btn-rounded z-depth-1a"><img class="node_modules/bootstrap-icons/icons/alarm.svg"></img></button>
+				<div class="d-flex flex-row bd-highlight mb-3 justify-content-center">
+				<!--Facebook-->
+					<button type="button" class="btn btn-white btn-rounded border"><i class="fab fa-facebook-f text-center"></i></button>
+					<!--Twitter-->
+					<button type="button" class="btn btn-white btn-rounded border"><i class="fab fa-twitter"></i></button>
+					<!--Google +-->
+					<button type="button" class="btn btn-white btn-rounded border"><i class="fab fa-google-plus-g"></i></button>
+				</div>
 			</div>
+			<!--Footer-->
+			<div class="modal-footer mx-5 pt-3 mb-1">
+				<p class="font-small text-muted d-flex justify-content-end ">Not a member?&nbsp; <a href="#" class="blue-text ml-1 text-decoration-none">
+					Sign Up</a></p>
+			</div>
+			</div>
+			<!--/.Content-->
 		</div>
-		<!--Footer-->
-		<div class="modal-footer mx-5 pt-3 mb-1">
-			<p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
-				Sign Up</a></p>
-		</div>
-		</div>
-		<!--/.Content-->
 	</div>
-	</div>
-	<!-- Modal -->
+	
 
-
+	
 
 	<script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.js"></script>
