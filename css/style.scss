@@ -67,8 +67,22 @@ a:hover{
     }
  }
 
+.foods{
+    border-radius: 11px;
+}
 
-
+$utilities: (
+  "opacity": (
+    property: opacity,
+    values: (
+      0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1,
+    )
+  )
+ );
 
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
